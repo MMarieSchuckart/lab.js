@@ -6,7 +6,7 @@ export const maxRepSeries = (arr, equalityFunc=(x, y) => x === y) => {
   let longestSequenceLength = 1
   let currentSequenceLength = 1
 
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length - 1; i++) {
     if (currentSequenceLength > longestSequenceLength) {
       longestSequenceLength = currentSequenceLength
     }

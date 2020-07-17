@@ -131,6 +131,14 @@ Loop
   .. js:attribute:: options.handMeDowns
 
     Options to pass to subordinate components (see :js:class:`flow.Sequence`).
+    
+
+  .. js:attribute:: Parameter index
+  
+    Using the parameter ``index``, you can access the index of the current trial. This might come in handy if you would like to pause the loop after a certain number of iterations - for example in order to include a break without having to exit the loop - or if you would like to randomize conditions over the whole experiment. 
+To include a break after a given number of iterations, use ``index`` in ``options.skip`` to skip a break screen in each iteration except for the one where you'd like to include the break (here: trial 124):
+
+${ this.parameters.index !== 123 }
 
 ----
 
